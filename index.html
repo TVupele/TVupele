@@ -3,82 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>Northern Grills App</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <nav>
-            <ul>
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+        <h1>Northern Grills & Chills</h1>
     </header>
-    
-    <section id="hero">
-        <h1>Welcome to My Portfolio</h1>
-        <p>Hi, I'm George Tavershima Upele. A passionate developer.</p>
-    </section>
-    
-    <section id="about">
-    <h2>About Me</h2>
-    <p>
-        Hello! I'm George T. Upele, a passionate Full Stack Web Developer with a knack for creating dynamic and responsive web applications. With a strong foundation in both front-end and back-end technologies, I thrive on solving complex problems and delivering high-quality, user-friendly solutions. 
-    </p>
-    <p>
-        My journey in web development started in 2023, and since then, I have honed my skills in various programming languages, frameworks, and tools. I am proficient in HTML, CSS, and JavaScript for front-end development, and I have extensive experience working with back-end technologies such as Node.js, Express, and databases like MongoDB and MySQL.
-    </p>
-    <p>
-        Here are some of the key skills and tools I work with:
-    </p>
-    <ul>
-        <li><strong>Front-end Technologies:</strong> HTML, CSS, JavaScript, React, Angular, Vue.js</li>
-        <li><strong>Back-end Technologies:</strong> Node.js, Express, Django, Ruby on Rails</li>
-        <li><strong>Databases:</strong> MongoDB, MySQL, PostgreSQL, Firebase</li>
-        <li><strong>Version Control:</strong> Git, GitHub, GitLab</li>
-        <li><strong>Deployment:</strong> AWS, Heroku, Netlify, Vercel</li>
-        <li><strong>Other Tools:</strong> Docker, Kubernetes, Webpack, Babel</li>
-    </ul>
-    <p>
-        I am continuously learning and staying up-to-date with the latest industry trends and technologies to ensure that I am always delivering the best possible solutions. When I am not coding, you can find me [include a personal touch, like a hobby or interest].
-    </p>
-    <p>
-        Let's connect and build something amazing together!
-    </p>
-</section>
-
-    
-    <section id="projects">
-        <h2>Projects</h2>
-        <div class="project">
-            <h3>Project 1</h3>
-            <p>This is a Demo project I created to test my Web Development Skills.</p>
-        </div>
-        <div class="project">
-            <h3>Project 2</h3>
-            <p>This is also a second Demo Project i created to Test my skills in Web Development.</p>
-        </div>
-    </section>
-    
-    <section id="contact">
-        <h2>Contact</h2>
-        <form>
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" required></textarea>
-            <button type="submit">Submit</button>
-        </form>
-    </section>
-    
+    <main>
+        <section id="menu">
+            <h2>Menu</h2>
+            <div class="menu-item">
+                <img src="images/pizza.jpg" alt="Pizza">
+                <h3>Pizza</h3>
+                <p>N5000</p>
+                <button onclick="addToCart('Pizza', 5000)">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <img src="images/burger.jpeg" alt="Burger">
+                <h3>Burger</h3>
+                <p>N3000</p>
+                <button onclick="addToCart('Burger', 3000)">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <img src="images/pasta.jpeg" alt="Pasta">
+                <h3>Pasta</h3>
+                <p>N6000</p>
+                <button onclick="addToCart('Pasta', 6000)">Add to Cart</button>
+            </div>
+        </section>
+        <section id="cart">
+            <h2>Cart</h2>
+            <ul id="cart-items">
+                
+            </ul>
+            <p id="total-price">Total: N0</p>
+            <button onclick="placeOrder()">Place Order</button>
+        </section>
+    </main>
     <footer>
-        <p>&copy; 2024 George T. Upele. All rights reserved.</p>
+        <p>&copy; 2024 Northern Grills & Chills. All rights reserved.</p>
     </footer>
-
     <script src="script.js"></script>
 </body>
 </html>
